@@ -1,0 +1,160 @@
+:root {
+  --color-primary: #4c0e1e;
+  --color-secondary: #c9b8a1;
+  --color-surface: #eeebe6;
+  --color-white: #ffffff;
+}
+
+html {
+  min-width: 320px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  color: var(--color-primary);
+  background-color: var(--color-white);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 1100;
+  padding: 0.75rem 1rem;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-secondary);
+}
+
+.site-header .navbar {
+  --bs-navbar-color: var(--color-primary);
+  --bs-navbar-hover-color: var(--color-primary);
+  --bs-navbar-active-color: var(--color-primary);
+  --bs-navbar-toggler-border-color: var(--color-secondary);
+  padding-block: 0.5rem;
+}
+
+.brand-logo {
+  display: block;
+  width: 12rem;
+  height: 4rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.site-header .nav-link {
+  padding-block: 0.75rem;
+  border-bottom: 2px solid transparent;
+}
+
+.site-header .nav-link:hover,
+.site-header .nav-link:focus-visible,
+.site-header .nav-link.active {
+  border-bottom-color: var(--color-secondary);
+}
+
+.site-header .nav-link.active {
+  font-weight: 600;
+}
+
+.page-main {
+  flex: 1;
+  display: grid;
+  align-items: center;
+  background-color: var(--color-surface);
+}
+
+.page-intro {
+  padding-block: clamp(4rem, 12vw, 8rem);
+}
+
+.page-kicker {
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.page-title {
+  max-width: 18ch;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+  font-size: clamp(2.25rem, 7vw, 4.5rem);
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.placeholder-text {
+  max-width: 42rem;
+  margin: 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--color-secondary);
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.site-footer {
+  padding-block: 1.5rem;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+.footer-brand {
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+.footer-note {
+  margin: 0;
+  color: var(--color-secondary);
+  font-size: 0.875rem;
+}
+
+@media (min-width: 992px) {
+  .site-header .navbar-nav {
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .brand-logo {
+    width: 10rem;
+    height: 3.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

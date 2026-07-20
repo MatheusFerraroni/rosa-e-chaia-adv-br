@@ -1,0 +1,43 @@
+.gitignore
+.nojekyll
+AGENTS.md
+README.md
+STRUCTURE.txt
+index.html
+escritorio/
+  index.html
+areas-de-atuacao/
+  index.html
+profissionais/
+  index.html
+contato/
+  index.html
+assets/
+  css/
+    theme.css
+  fonts/
+    .gitkeep
+  icons/
+    .gitkeep
+  img/
+    .gitkeep
+  js/
+    .gitkeep
+  vendor/
+    bootstrap/
+      README.md
+      css/
+        bootstrap.min.css
+      js/
+        bootstrap.bundle.min.js
+contracts/
+  00-project-brief.md
+  01-scope.md
+  02-information-architecture.md
+  03-technical-architecture.md
+  04-design-system.md
+  05-content-and-legal.md
+  06-accessibility-seo.md
+  07-deployment-github-pages.md
+  08-definition-of-done.md
+  README.md
