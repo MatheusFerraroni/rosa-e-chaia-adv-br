@@ -11,6 +11,8 @@
 │   └── index.html
 ├── profissionais/
 │   └── index.html
+├── publicacoes/
+│   └── index.html
 └── contato/
     └── index.html
 ```
@@ -23,7 +25,8 @@ Ordem recomendada:
 2. Escritório
 3. Áreas de atuação
 4. Profissionais
-5. Contato
+5. Publicações
+6. Contato
 
 ## Convenções
 

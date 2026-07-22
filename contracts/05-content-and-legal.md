@@ -34,6 +34,42 @@
 - não publicar textos que possam sugerir garantia de êxito;
 - submeter conteúdo institucional e jurídico à revisão responsável antes da publicação.
 
+## Publicações
+
+- a página de publicações está aprovada como rota estática;
+- cada texto, imagem, autoria e data deve ser confirmado antes de ser publicado;
+- publicações devem manter caráter informativo e institucional, sem promessa de resultado;
+- imagens publicadas devem ter autorização de uso e texto alternativo adequado.
+
+## Avaliações do Google
+
+- a página inicial pode exibir uma seção em carrossel direcionando para avaliações públicas do Google;
+- textos individuais de avaliações, nomes de avaliadores, notas e datas só devem ser publicados quando confirmados por fonte verificável ou enviados pela responsável pelo projeto;
+- não inventar depoimentos, avaliações, notas ou comentários.
+
+## Áreas de atuação aprovadas
+
+- Direito Civil;
+- Direito de Família;
+- Direito Digital;
+- Proteção de Dados (LGPD);
+- Direito Previdenciário;
+- Direito do Trabalho.
+
+## Canais de contato aprovados
+
+- WhatsApp: (14) 98190-3906 — Dra. Gabriela;
+- WhatsApp: (14) 99610-4356 — Dra. Giane;
+- WhatsApp: (14) 99909-1082 — Escritório Rosa & Chaia;
+- E-mail: gabriela@rosaechaia.adv.br;
+- E-mail: giane@rosaechaia.adv.br;
+- Instagram: https://www.instagram.com/rosaechaiaadv;
+- Facebook: https://www.facebook.com/people/Rosa-Chaia-Advocacia-e-Consultoria-Jur%C3%ADdica/61585195222021/.
+- Endereço: R. Remo Castelli, 15 – Nova Marília, Marília – SP, 17522-280.
+- Mapa: https://maps.app.goo.gl/vkh6oWRe59MXmfMh6.
+
+O botão flutuante de WhatsApp deve usar apenas os números aprovados acima, abrir cada conversa em nova aba, não aparecer na página de contato e evitar sobreposição visual com o rodapé.
+
 ## Privacidade
 
 Qualquer coleta de dados exige definição prévia de:
