@@ -56,6 +56,11 @@
 - Direito Previdenciário;
 - Direito do Trabalho.
 
+## Parcerias profissionais
+
+- A página de profissionais pode informar que o escritório trabalha em conjunto com parceiros de diversas áreas do Direito, incluindo Direito Previdenciário, Direito Tributário, Direito Criminal e Direito Empresarial, entre outras áreas;
+- não citar nomes, qualificações, registros, resultados ou vínculos específicos de parceiros sem confirmação expressa.
+
 ## Canais de contato aprovados
 
 - WhatsApp: (14) 98190-3906 — Dra. Gabriela;

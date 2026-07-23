@@ -158,6 +158,8 @@ button:focus-visible {
 
 .home-intro-copy p {
   margin-bottom: 0.85rem;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .home-intro-copy p:last-child {
@@ -222,6 +224,8 @@ button:focus-visible {
   color: var(--color-primary);
   font-size: 1rem;
   line-height: 1.7;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .home-pillars-grid {
@@ -248,6 +252,8 @@ button:focus-visible {
   color: var(--color-primary);
   font-size: 1rem;
   line-height: 1.65;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .home-reviews-panel {
@@ -340,6 +346,8 @@ button:focus-visible {
   color: var(--color-primary);
   font-size: clamp(1.05rem, 2.5vw, 1.25rem);
   line-height: 1.65;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .google-review-author {
@@ -420,6 +428,8 @@ button:focus-visible {
   margin-bottom: 1rem;
   font-size: 1rem;
   line-height: 1.75;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .office-story p:last-child {
@@ -487,6 +497,8 @@ button:focus-visible {
   color: var(--color-primary);
   font-size: 1rem;
   line-height: 1.7;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .practice-area-block p:last-child {
@@ -513,6 +525,8 @@ button:focus-visible {
   color: var(--color-primary);
   font-size: 1.05rem;
   line-height: 1.7;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .publications-empty {
@@ -525,6 +539,11 @@ button:focus-visible {
 .publications-empty p {
   margin-bottom: 0.5rem;
   line-height: 1.65;
+}
+
+.publications-empty p:not(.publications-empty-title) {
+  text-align: justify;
+  hyphens: auto;
 }
 
 .publications-empty p:last-child {
@@ -584,13 +603,15 @@ button:focus-visible {
   line-height: 1.2;
 }
 
-.publication-content p {
+.publication-content p:not(.publication-meta) {
   margin-bottom: 0.85rem;
   font-size: 1rem;
   line-height: 1.7;
+  text-align: justify;
+  hyphens: auto;
 }
 
-.publication-content p:last-child {
+.publication-content p:not(.publication-meta):last-child {
   margin-bottom: 0;
 }
 
@@ -756,10 +777,37 @@ button:focus-visible {
   color: var(--color-primary);
   font-size: 1rem;
   line-height: 1.7;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .professional-bio p:last-child {
   margin-bottom: 0;
+}
+
+.professional-partners-panel {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: clamp(1.35rem, 4vw, 1.75rem);
+  border-left: 4px solid var(--color-secondary);
+  background-color: var(--color-white);
+}
+
+.professional-partners-title {
+  margin-bottom: 0.75rem;
+  color: var(--color-primary);
+  font-size: clamp(1.25rem, 2.5vw, 1.55rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.professional-partners-panel p {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .site-footer {
