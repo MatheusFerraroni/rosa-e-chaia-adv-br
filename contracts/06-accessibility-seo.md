@@ -25,6 +25,14 @@ Cada página deve ter:
 - conteúdo textual rastreável;
 - links internos coerentes.
 
+### Indexação antes da confirmação do domínio
+
+- páginas institucionais com conteúdo aprovado devem usar `index, follow, max-image-preview:large`;
+- `publicacoes/` deve usar `noindex, follow` enquanto contiver apenas o aviso de conteúdo em preparação;
+- remover o `noindex` de `publicacoes/` assim que a primeira publicação aprovada for disponibilizada;
+- incluir `og:site_name` de forma consistente nas páginas públicas;
+- não publicar URL canônica, sitemap ou dados estruturados dependentes de URL antes da confirmação do domínio definitivo.
+
 ## Arquivos posteriores
 
 Após confirmar domínio e rotas, criar:
