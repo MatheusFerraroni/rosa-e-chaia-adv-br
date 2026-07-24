@@ -2,7 +2,7 @@
 
 ## Produto
 
-Site institucional do escritório de advocacia **Rosa e Chaia**.
+Site institucional do escritório de advocacia **Rosa & Chaia**.
 
 ## Objetivo
 

@@ -11,6 +11,8 @@
 
 ## Conteúdo proibido sem confirmação
 
+Com exceção dos dados expressamente aprovados neste contrato, não publicar sem confirmação:
+
 - números de OAB;
 - nomes e cargos;
 - endereços;
@@ -24,6 +26,13 @@
 - anos de experiência;
 - especializações;
 - certificações.
+
+## Dados profissionais aprovados
+
+- Gabriela Chaia de Carvalho Ferraroni: Advogada e Sócia Fundadora do escritório Rosa & Chaia; OAB/SP 461.132; graduada em Direito pelo UNIVEM – Centro Universitário Eurípides de Marília; possui especialização pelo IBET – Instituto Brasileiro de Estudos Tributários; atua nas áreas de Direito Civil e Direito do Trabalho, em consultoria jurídica e contencioso;
+- Giane Francina Rosa: Advogada e Sócia Fundadora do escritório Rosa & Chaia; OAB/SP 492.042; graduada em Direito pelo UNIVEM – Centro Universitário Eurípides de Marília; possui especialização em Direito Digital, Proteção de Dados e Compliance pela Universidade de Marília – UNIMAR; atua nas áreas de Direito Civil, Proteção de Dados, Direito Digital e Direito do Trabalho, em consultoria jurídica e contencioso;
+- os dados profissionais acima estão confirmados e aprovados para publicação;
+- qualquer inclusão ou alteração de nome, cargo, registro, formação, especialização, certificação ou área de atuação exige nova confirmação.
 
 ## Regras editoriais
 

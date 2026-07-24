@@ -1,0 +1,23 @@
+{
+  "name": "Rosa & Chaia — Advocacia e Consultoria Jurídica",
+  "short_name": "Rosa & Chaia",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/assets/img/favicon/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/img/favicon/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#4C0E1E",
+  "background_color": "#EEEBE6",
+  "display": "standalone"
+}

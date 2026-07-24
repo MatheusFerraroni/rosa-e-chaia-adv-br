@@ -1232,6 +1232,50 @@ button:focus-visible {
   }
 }
 
+.page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.page-action-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.7rem 1.15rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 0.35rem;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.page-action-link:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.page-action-link--secondary {
+  background: transparent;
+  color: var(--color-primary);
+}
+
+.page-action-link--secondary:hover {
+  background: var(--color-primary);
+}
+
+.page-action-link:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

@@ -19,29 +19,33 @@ Cada página deve ter:
 
 - `<title>` exclusivo;
 - `meta description` exclusiva;
-- URL canônica após confirmação do domínio;
+- URL canônica absoluta e autorreferente no domínio `https://rosaechaia.adv.br/`;
 - um `<h1>` principal;
-- Open Graph básico;
+- Open Graph e Twitter Cards;
 - conteúdo textual rastreável;
 - links internos coerentes.
 
-### Indexação antes da confirmação do domínio
+### Domínio e indexação
 
+- o domínio canônico confirmado é `https://rosaechaia.adv.br/`, sem `www` e com barra final nas rotas;
 - páginas institucionais com conteúdo aprovado devem usar `index, follow, max-image-preview:large`;
 - `publicacoes/` deve usar `noindex, follow` enquanto contiver apenas o aviso de conteúdo em preparação;
 - remover o `noindex` de `publicacoes/` assim que a primeira publicação aprovada for disponibilizada;
 - incluir `og:site_name` de forma consistente nas páginas públicas;
-- não publicar URL canônica, sitemap ou dados estruturados dependentes de URL antes da confirmação do domínio definitivo.
+- manter `publicacoes/` fora do sitemap enquanto estiver em `noindex`;
+- URLs inexistentes devem retornar a página `404.html` com status HTTP 404 e `noindex, follow`;
+- não criar redirecionamentos para URLs descartadas do site anterior.
 
-## Arquivos posteriores
+## Arquivos de SEO
 
-Após confirmar domínio e rotas, criar:
+Manter na raiz:
 
 ```text
 robots.txt
 sitemap.xml
-favicon.ico
-site.webmanifest
+404.html
+CNAME
 ```
 
-Não publicar URLs provisórias como canônicas.
+Os favicons e o manifest ficam em `assets/img/favicon/`. A imagem social
+compartilhada fica em `assets/img/social/rosa-e-chaia-social-1200x630.png`.

@@ -1,6 +1,6 @@
-# Rosa e Chaia
+# Rosa & Chaia
 
-Site institucional estático do escritório Rosa e Chaia.
+Site institucional estático do escritório Rosa & Chaia.
 
 ## Estado atual
 
@@ -8,12 +8,16 @@ O projeto contém as seis rotas estáticas previstas nos contratos, com navegaç
 responsiva, identidade visual compartilhada, rodapé institucional e botão
 flutuante de WhatsApp em todas as páginas, exceto na página de contato.
 
-O conteúdo institucional e jurídico está implementado e ainda depende de revisão
-e aprovação final. A página de publicações está disponível, mas seus artigos
-continuam em preparação.
+O conteúdo institucional, os dados profissionais e a publicidade jurídica
+foram revisados e aprovados. A página de publicações está disponível, mas seus
+artigos continuam em preparação e, por isso, permanece fora da indexação.
 
 O Bootstrap 5.3.8 está armazenado localmente e não há dependências em tempo de
 execução carregadas por CDN.
+
+O domínio canônico é `https://rosaechaia.adv.br/`. O projeto inclui canonical,
+Open Graph, Twitter Cards, favicon, manifest, imagem social, `robots.txt`,
+`sitemap.xml`, `404.html` e `CNAME`.
 
 ## Executar localmente
 
@@ -52,11 +56,10 @@ dimensões e a transparência aplicáveis e só então atualiza as variantes em
 
 ## Pendências de conteúdo e publicação
 
-- revisar e aprovar o conteúdo institucional e jurídico, os registros
-  profissionais e as avaliações exibidas;
-- confirmar o domínio próprio antes de criar `CNAME` e URLs canônicas;
-- criar `robots.txt`, `sitemap.xml`, favicon e manifest após a confirmação do
-  domínio;
+- publicar e revisar individualmente cada conteúdo futuro da página de
+  publicações;
+- configurar o domínio personalizado e os registros DNS no GitHub Pages;
+- ativar HTTPS e validar os redirecionamentos de HTTP e `www`;
 - validar a publicação real no GitHub Pages antes de divulgá-la.
 
 ## Estrutura
@@ -68,6 +71,10 @@ rosa-e-chaia-adv-br/
 ├── STRUCTURE.txt
 ├── .gitignore
 ├── .nojekyll
+├── 404.html
+├── CNAME
+├── robots.txt
+├── sitemap.xml
 ├── index.html
 ├── escritorio/
 │   └── index.html
@@ -87,8 +94,10 @@ rosa-e-chaia-adv-br/
 │   ├── fonts/
 │   ├── icons/
 │   ├── img/
+│   │   ├── favicon/
 │   │   ├── icons/
 │   │   ├── publicacoes/
+│   │   ├── social/
 │   │   └── imagens institucionais, variantes WebP e arquivos de marca
 │   ├── js/
 │   │   └── whatsapp-float.js
