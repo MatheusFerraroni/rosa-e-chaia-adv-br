@@ -10,8 +10,12 @@ areas-de-atuacao/
   index.html
 profissionais/
   index.html
+publicacoes/
+  index.html
 contato/
   index.html
+scripts/
+  generate-responsive-images.sh
 assets/
   css/
     theme.css
@@ -21,8 +25,49 @@ assets/
     .gitkeep
   img/
     .gitkeep
+    escritorio-ambiente-interno.jpg
+    escritorio-ambiente-interno-480.webp
+    escritorio-ambiente-interno-960.webp
+    escritorio-fachada.jpg
+    escritorio-fachada-480.webp
+    escritorio-fachada-960.webp
+    escritorio-identidade-visual.jpg
+    escritorio-identidade-visual-480.webp
+    escritorio-identidade-visual-960.webp
+    escritorio-identidade-visual-1800.webp
+    escritorio-sala-reuniao.jpg
+    escritorio-sala-reuniao-480.webp
+    escritorio-sala-reuniao-960.webp
+    icons/
+      facebook.svg
+      instagram.svg
+      whatsapp.svg
+    logo-circular-fundo-bege.png
+    logo-circular-fundo-claro.png
+    logo-circular-fundo-vinho.png
+    logo-circular-monocromatica-branca.png
+    logo-circular-monocromatico-branco.png
+    logo-circular-monocromatico-preto.png
+    logo-principal-bege-branco.png
+    logo-principal-bege-vinho.png
+    logo-principal-monocromatico-branco.png
+    logo-secundario-bege-branco-duplicado.png
+    logo-secundario-bege-branco.png
+    logo-secundario-bege-vinho.png
+    logo-secundario-monocromatico-branco.png
+    marca-dagua-home.png
+    marca-dagua-logo-secundaria-2.png
+    profissional-gabriela-chaia-recorte.png
+    profissional-gabriela-chaia-recorte-400.webp
+    profissional-gabriela-chaia-recorte-720.webp
+    profissional-giane-rosa-recorte.png
+    profissional-giane-rosa-recorte-400.webp
+    profissional-giane-rosa-recorte-720.webp
+    publicacoes/
+      README.md
   js/
     .gitkeep
+    whatsapp-float.js
   vendor/
     bootstrap/
       README.md
