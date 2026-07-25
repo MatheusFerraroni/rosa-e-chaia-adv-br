@@ -17,7 +17,8 @@ execução carregadas por CDN.
 
 O domínio canônico é `https://rosaechaia.adv.br/`. O projeto inclui canonical,
 Open Graph, Twitter Cards, favicon, manifest, imagem social, `robots.txt`,
-`sitemap.xml`, `404.html` e `CNAME`.
+`sitemap.xml`, `404.html`, `CNAME` e dados estruturados `WebSite` e
+`LegalService` na página inicial.
 
 ## Executar localmente
 

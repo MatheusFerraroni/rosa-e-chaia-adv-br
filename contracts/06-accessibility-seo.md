@@ -49,3 +49,12 @@ CNAME
 
 Os favicons e o manifest ficam em `assets/img/favicon/`. A imagem social
 compartilhada fica em `assets/img/social/rosa-e-chaia-social-1200x630.png`.
+
+## Dados estruturados
+
+- a página inicial deve conter um único bloco JSON-LD com um grafo `WebSite` e `LegalService`;
+- `WebSite` deve identificar o nome, o domínio canônico, o idioma e o escritório responsável;
+- `LegalService` deve usar apenas nome, contato, endereço, mapa, redes sociais e imagens já publicados na página;
+- o telefone principal da entidade é o número aprovado do escritório;
+- não incluir avaliações, notas, horários, abrangência, modalidades de atendimento, pessoas, coordenadas, preço, razão social ou registro enquanto esses campos não fizerem parte do escopo visível aprovado;
+- não repetir o grafo institucional nas páginas internas nesta etapa.
