@@ -58,3 +58,11 @@ compartilhada fica em `assets/img/social/rosa-e-chaia-social-1200x630.png`.
 - o telefone principal da entidade é o número aprovado do escritório;
 - não incluir avaliações, notas, horários, abrangência, modalidades de atendimento, pessoas, coordenadas, preço, razão social ou registro enquanto esses campos não fizerem parte do escopo visível aprovado;
 - não repetir o grafo institucional nas páginas internas nesta etapa.
+
+## Links internos contextuais
+
+- a página inicial deve ligar o texto introdutório às páginas de escritório, áreas de atuação, profissionais e contato;
+- a página de escritório deve ligar os nomes das fundadoras aos respectivos fragmentos da página de profissionais e as áreas jurídicas aos respectivos fragmentos da página de áreas de atuação;
+- a página de áreas de atuação deve ligar seu texto final às páginas de profissionais, parceiros e contato;
+- os links contextuais devem abrir na mesma aba, usar textos descritivos e não substituir a navegação principal;
+- a página de contato e a página de publicações não recebem links contextuais adicionais nesta etapa.

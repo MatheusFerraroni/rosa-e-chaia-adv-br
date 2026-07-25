@@ -54,6 +54,7 @@ Com exceção dos dados expressamente aprovados neste contrato, não publicar se
 
 - a página inicial pode exibir uma seção em carrossel direcionando para avaliações públicas do Google;
 - textos individuais de avaliações, nomes de avaliadores, notas e datas só devem ser publicados quando confirmados por fonte verificável ou enviados pela responsável pelo projeto;
+- as avaliações aprovadas devem ser exibidas sem datas relativas, preservando o texto e o nome de cada avaliador;
 - não inventar depoimentos, avaliações, notas ou comentários.
 
 ## Áreas de atuação aprovadas
