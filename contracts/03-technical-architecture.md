@@ -6,6 +6,7 @@
 - CSS customizado;
 - JavaScript nativo;
 - Bootstrap compilado e armazenado no repositório;
+- gerador estático pequeno em Node.js;
 - GitHub Pages.
 
 ## Bootstrap local
@@ -52,6 +53,26 @@ assets/css/
 - evitar dependências extras;
 - não bloquear a renderização;
 - não gerar erros no console.
+
+O JavaScript de publicações aprimora progressivamente uma listagem já presente
+no HTML. Sem JavaScript, os cards e links individuais continuam disponíveis.
+
+## Geração estática
+
+- o gerador lê `_publicacoes/<ano>/<slug>.md`;
+- o Markdown usa GitHub Flavored Markdown com HTML cru desabilitado;
+- dependências Node são usadas apenas em validação e build;
+- o artefato final fica em `dist/` e não é versionado;
+- somente arquivos públicos são copiados para o artefato;
+- páginas individuais, `index.json` e sitemap são gerados no build;
+- falhas de validação impedem o novo deploy;
+- nenhuma conversão ou otimização automática de imagens é realizada.
+
+O índice público fica em `/assets/data/publicacoes/index.json` e contém
+`schemaVersion`, data de geração, facetas e itens com URL, datas, título,
+resumo, autorias, categorias, tags e imagem opcional. O template das páginas
+individuais usa marcadores substituídos pelo gerador, sem executar HTML vindo
+do Markdown.
 
 ## Caminhos
 

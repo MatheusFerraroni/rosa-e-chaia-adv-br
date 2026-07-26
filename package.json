@@ -1,0 +1,21 @@
+{
+  "name": "rosa-e-chaia-adv-br",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "validate": "node scripts/publications.mjs validate",
+    "test": "node --test scripts/tests/*.test.mjs",
+    "build": "node scripts/publications.mjs build",
+    "check": "node scripts/publications.mjs check",
+    "serve": "node scripts/serve.mjs"
+  },
+  "dependencies": {
+    "js-yaml": "3.15.0",
+    "markdown-it": "14.1.0",
+    "markdown-it-task-lists": "2.1.1"
+  }
+}

@@ -29,6 +29,16 @@
 - usar espaçamento consistente;
 - evitar animações que prejudiquem leitura ou navegação.
 
+## Publicações
+
+- os controles de busca e filtros devem usar composição compacta;
+- busca e ano compartilham a primeira linha quando houver largura suficiente;
+- a quantidade de resultados é anunciada para tecnologias assistivas, sem
+  ocupar espaço visual permanente;
+- cada card usa contorno completo e destaque lateral;
+- categorias e tags aparecem como links textuais separados por vírgulas, sem
+  aparência de botões.
+
 ## Tipografia
 
 A família tipográfica ainda precisa de aprovação.

@@ -32,7 +32,7 @@
     <meta name="apple-mobile-web-app-title" content="Rosa &amp; Chaia">
     <link rel="manifest" href="/assets/img/favicon/site.webmanifest">
     <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/theme.css?v=20260726-carousel-counter">
+    <link rel="stylesheet" href="/assets/css/theme.css?v=20260726-publications">
   </head>
   <body>
     <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
@@ -68,27 +68,19 @@
         <div class="publications-panel">
           <p class="publications-intro">Espaço destinado a textos, artigos informativos e imagens publicados pelas advogadas do escritório.</p>
 
+          <!-- PUBLICATIONS_CONTROLS -->
+
+          <!-- PUBLICATIONS_EMPTY_START -->
           <div class="publications-empty" role="status">
             <p class="publications-empty-title">Publicações em preparação</p>
             <p>Em breve, os conteúdos do Rosa &amp; Chaia serão disponibilizados nesta página.</p>
           </div>
+          <!-- PUBLICATIONS_EMPTY_END -->
 
-          <div class="publications-grid">
-            <!--
-            Modelo para adicionar uma publicação:
-
-            <article class="publication-card">
-              <figure class="publication-image-frame">
-                <img class="publication-image" src="/assets/img/publicacoes/nome-da-imagem.jpg" width="900" height="600" alt="Descrição objetiva da imagem.">
-              </figure>
-              <div class="publication-content">
-                <p class="publication-meta">Data · Dra. Nome da autora</p>
-                <h2 class="publication-title">Título da publicação</h2>
-                <p>Resumo ou texto inicial da publicação.</p>
-              </div>
-            </article>
-            -->
+          <div class="publications-grid" data-publications-list>
+            <!-- PUBLICATIONS_CARDS -->
           </div>
+          <nav class="publications-pagination" data-publications-pagination aria-label="Paginação de publicações" hidden></nav>
         </div>
       </section>
     </main>
@@ -142,6 +134,7 @@
     </footer>
 
     <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+    <!-- PUBLICATIONS_SCRIPT -->
     <script src="/assets/js/whatsapp-float.js" defer></script>
   </body>
 </html>

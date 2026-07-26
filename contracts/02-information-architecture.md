@@ -12,7 +12,9 @@
 ├── profissionais/
 │   └── index.html
 ├── publicacoes/
-│   └── index.html
+│   ├── index.html
+│   └── <slug>/
+│       └── index.html
 └── contato/
     └── index.html
 ```
@@ -35,6 +37,21 @@ Ordem recomendada:
 - links internos devem funcionar no domínio e em ambiente local;
 - não usar extensões `.html` nos links de navegação;
 - não criar rotas sem registrar a mudança neste contrato.
+
+## Publicações
+
+- a URL individual usa `/publicacoes/<slug>/`;
+- a `slug` deriva do nome do arquivo Markdown e deve ser única e imutável;
+- o ano organiza os arquivos editoriais e alimenta o filtro, mas não integra a
+  URL pública;
+- categorias e tags de uma publicação ligam de volta à listagem com o filtro
+  correspondente;
+- busca, filtros, ordenação e página atual são representados por parâmetros de
+  consulta na listagem;
+- os parâmetros públicos são `q`, `ano`, `autor`, `categoria`, `tag`, `ordem`
+  e `pagina`;
+- cada faceta aceita um valor ativo, a página exibe seis resultados e as
+  ordenações aceitas são recentes, antigas e título.
 
 ## Estrutura de cada página
 

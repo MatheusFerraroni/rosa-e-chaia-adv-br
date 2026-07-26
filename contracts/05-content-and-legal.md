@@ -46,9 +46,25 @@ Com exceção dos dados expressamente aprovados neste contrato, não publicar se
 ## Publicações
 
 - a página de publicações está aprovada como rota estática;
+- cada publicação aprovada é mantida como Markdown em
+  `_publicacoes/<ano>/<slug>.md`;
 - cada texto, imagem, autoria e data deve ser confirmado antes de ser publicado;
 - publicações devem manter caráter informativo e institucional, sem promessa de resultado;
-- imagens publicadas devem ter autorização de uso e texto alternativo adequado.
+- imagens publicadas devem ter autorização de uso e texto alternativo adequado;
+- uma publicação pode ter uma ou mais autorias;
+- as autorias inicialmente permitidas são Gabriela Chaia de Carvalho
+  Ferraroni, Giane Francina Rosa e o escritório Rosa & Chaia;
+- pelo menos uma categoria aberta é obrigatória e uma publicação pode ter
+  múltiplas categorias e tags;
+- categorias e tags não representam automaticamente áreas de atuação
+  institucionais;
+- o resumo pode ser informado pela autora ou extraído literalmente do primeiro
+  parágrafo, sem geração ou paráfrase por inteligência artificial;
+- a data de publicação é obrigatória, não pode ser futura e deve corresponder à
+  pasta anual;
+- a data de atualização é opcional e nunca pode ser anterior à publicação;
+- HTML cru, scripts, conteúdo remoto executável e dados não confirmados são
+  proibidos nos arquivos editoriais.
 
 ## Avaliações do Google
 

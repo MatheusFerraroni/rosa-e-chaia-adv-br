@@ -11,6 +11,8 @@ flutuante de WhatsApp em todas as páginas, exceto na página de contato.
 O conteúdo institucional, os dados profissionais e a publicidade jurídica
 foram revisados e aprovados. A página de publicações está disponível, mas seus
 artigos continuam em preparação e, por isso, permanece fora da indexação.
+Quando houver arquivos válidos em `_publicacoes/<ano>/`, o gerador criará a
+listagem, as páginas individuais e o índice público automaticamente.
 
 O Bootstrap 5.3.8 está armazenado localmente e não há dependências em tempo de
 execução carregadas por CDN.
@@ -25,21 +27,50 @@ Open Graph, Twitter Cards, favicon, manifest, imagem social, `robots.txt`,
 `sitemap.xml`, `404.html`, `CNAME` e dados estruturados `WebSite` e
 `LegalService` na página inicial.
 
-O site está publicado pelo GitHub Pages com HTTPS ativo. As versões HTTP e
-`www` redirecionam diretamente para o domínio canônico, e URLs inexistentes
-retornam status HTTP 404 real.
+O site está publicado pelo GitHub Pages com HTTPS ativo. O repositório contém
+um workflow para validar, testar e gerar em `dist/` somente os arquivos
+públicos antes do deploy. As versões HTTP e `www` redirecionam diretamente
+para o domínio canônico, e URLs inexistentes retornam status HTTP 404 real.
 
 ## Executar localmente
 
 Na raiz do projeto, execute:
 
 ```bash
-python3 -m http.server 8000
+npm ci
+npm run build
+npm run check
+npm run serve
 ```
 
-Abra `http://localhost:8000/` no navegador. O projeto usa caminhos iniciados na
-raiz e, portanto, não oferece suporte à abertura direta dos arquivos por
-`file://`.
+Abra `http://127.0.0.1:8000/` no navegador. O servidor usa o artefato de
+`dist/`, reproduz as rotas com `index.html` e retorna a página 404 com o status
+correto. O projeto usa caminhos iniciados na raiz e não oferece suporte à
+abertura direta dos arquivos por `file://`.
+
+Os comandos disponíveis são:
+
+- `npm run validate`: valida os Markdown sem gerar o site;
+- `npm test`: executa os testes automatizados;
+- `npm run build`: recria `dist/`;
+- `npm run check`: confere o conteúdo e as exclusões do artefato;
+- `npm run serve`: serve o `dist/` já gerado.
+
+O manual para autoras e o arquivo copiável estão em
+`_publicacoes/README.md` e `_publicacoes/_modelo.md`. Eles nunca integram o
+artefato público.
+
+## Publicação pelo GitHub Pages
+
+O workflow **Validar e publicar GitHub Pages** executa as validações em pull
+requests e publica o `dist/` somente a partir da `main`. Antes do primeiro
+deploy por esse fluxo, altere em **Settings → Pages → Build and deployment** a
+fonte para **GitHub Actions**. Essa troca de configuração remota não é feita
+pelos scripts do projeto.
+
+O artefato preserva `CNAME`, `.nojekyll`, `404.html` e os recursos estáticos
+atuais. Se validação, teste, build ou inspeção falhar, o job de deploy não é
+executado e a última versão válida permanece publicada.
 
 ## Gerar imagens responsivas
 
@@ -62,6 +93,7 @@ dimensões e a transparência aplicáveis e só então atualiza as variantes em
 - `/areas-de-atuacao/`
 - `/profissionais/`
 - `/publicacoes/`
+- `/publicacoes/<slug>/` para cada publicação gerada
 - `/contato/`
 
 ## Publicação validada
@@ -99,9 +131,18 @@ rosa-e-chaia-adv-br/
 ├── .nojekyll
 ├── 404.html
 ├── CNAME
+├── package.json
+├── package-lock.json
 ├── robots.txt
 ├── sitemap.xml
 ├── index.html
+├── _publicacoes/
+│   ├── README.md
+│   └── _modelo.md
+├── config/
+│   └── publication-authors.json
+├── templates/
+│   └── publicacao.html
 ├── escritorio/
 │   └── index.html
 ├── areas-de-atuacao/
@@ -113,7 +154,13 @@ rosa-e-chaia-adv-br/
 ├── contato/
 │   └── index.html
 ├── scripts/
-│   └── generate-responsive-images.sh
+│   ├── generate-responsive-images.sh
+│   ├── publications.mjs
+│   ├── serve.mjs
+│   ├── lib/
+│   │   └── publications.mjs
+│   └── tests/
+│       └── publications.test.mjs
 ├── assets/
 │   ├── css/
 │   │   └── theme.css
@@ -127,6 +174,7 @@ rosa-e-chaia-adv-br/
 │   │   └── imagens institucionais, variantes WebP e arquivos de marca
 │   ├── js/
 │   │   ├── home-reviews-carousel.js
+│   │   ├── publications.js
 │   │   └── whatsapp-float.js
 │   └── vendor/
 │       └── bootstrap/

@@ -1,0 +1,74 @@
+name: Validar e publicar GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Validar e gerar site
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v6
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Validar publicações
+        run: npm run validate
+
+      - name: Executar testes
+        run: npm test
+
+      - name: Gerar site
+        run: npm run build
+
+      - name: Conferir artefato
+        run: npm run check
+
+      - name: Configurar GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        uses: actions/configure-pages@v6
+
+      - name: Empacotar site estático
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+          include-hidden-files: true
+
+  deploy:
+    name: Publicar
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Publicar artefato
+        id: deployment
+        uses: actions/deploy-pages@v5

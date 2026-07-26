@@ -31,6 +31,10 @@ Uma entrega só está pronta quando todos os itens aplicáveis forem atendidos.
 ## Publicação
 
 - GitHub Pages configurado;
+- workflow de validação, build e deploy concluído sem erros;
+- artefato contém somente arquivos públicos;
+- manual e modelo de publicação não são publicados;
+- índice JSON, páginas individuais e sitemap são consistentes;
 - domínio confirmado antes de criar `CNAME`;
 - HTTPS ativo;
 - rotas e recursos validados no ambiente publicado.

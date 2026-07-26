@@ -4,12 +4,16 @@
 
 O site deve ser compatível com GitHub Pages e domínio próprio.
 
-## Estratégia inicial
+## Estratégia
 
-- publicar arquivos estáticos diretamente;
-- manter `.nojekyll` na raiz;
-- usar a raiz do branch de publicação como raiz do site;
-- evitar etapa de build enquanto não houver necessidade aprovada.
+- validar e gerar o site com Node.js em GitHub Actions;
+- publicar no GitHub Pages somente o artefato estático `dist/`;
+- manter `.nojekyll` e `CNAME` no artefato;
+- disparar o fluxo em commits na `main` e manualmente quando necessário;
+- impedir o deploy quando validações, testes, build ou inspeção do artefato
+  falharem;
+- manter a última versão válida publicada quando um novo build falhar;
+- não versionar `dist/` nem arquivos gerados.
 
 ## Domínio próprio
 
@@ -32,3 +36,7 @@ O domínio final confirmado é `rosaechaia.adv.br`.
 - confirmar ausência de segredos;
 - revisar dados institucionais;
 - confirmar HTTPS e domínio.
+- confirmar que manual, modelo, contratos, scripts, dependências e fontes
+  editoriais não foram incluídos no artefato;
+- confirmar geração do índice, páginas individuais e sitemap;
+- confirmar que a configuração de Pages usa GitHub Actions como fonte.
