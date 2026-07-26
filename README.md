@@ -15,10 +15,19 @@ artigos continuam em preparação e, por isso, permanece fora da indexação.
 O Bootstrap 5.3.8 está armazenado localmente e não há dependências em tempo de
 execução carregadas por CDN.
 
+Na página inicial, o carrossel de avaliações avança automaticamente a cada 6,5
+segundos, respeita a preferência por redução de movimento e permanece pausado
+após a primeira interação intencional. Em telas menores que 1024 pixels, a
+navegação usa contador numérico entre as setas; nas demais, usa indicadores.
+
 O domínio canônico é `https://rosaechaia.adv.br/`. O projeto inclui canonical,
 Open Graph, Twitter Cards, favicon, manifest, imagem social, `robots.txt`,
 `sitemap.xml`, `404.html`, `CNAME` e dados estruturados `WebSite` e
 `LegalService` na página inicial.
+
+O site está publicado pelo GitHub Pages com HTTPS ativo. As versões HTTP e
+`www` redirecionam diretamente para o domínio canônico, e URLs inexistentes
+retornam status HTTP 404 real.
 
 ## Executar localmente
 
@@ -55,13 +64,29 @@ dimensões e a transparência aplicáveis e só então atualiza as variantes em
 - `/publicacoes/`
 - `/contato/`
 
-## Pendências de conteúdo e publicação
+## Publicação validada
+
+Em 26 de julho de 2026:
+
+- as seis rotas públicas responderam com HTML e status HTTP 200;
+- as cinco páginas indexáveis apresentaram canonical autorreferente e estavam
+  incluídas no `sitemap.xml`;
+- `/publicacoes/` permaneceu em `noindex, follow` e fora do sitemap;
+- uma URL inexistente retornou status HTTP 404 com `noindex, follow`;
+- HTTP e `www` redirecionaram em uma etapa para o domínio canônico HTTPS;
+- o Lighthouse 13.4.1, em perfil móvel, registrou SEO e acessibilidade 100 nas
+  cinco páginas indexáveis, com performance entre 97 e 100.
+
+## Pendências de conteúdo e SEO
 
 - publicar e revisar individualmente cada conteúdo futuro da página de
   publicações;
-- configurar o domínio personalizado e os registros DNS no GitHub Pages;
-- ativar HTTPS e validar os redirecionamentos de HTTP e `www`;
-- validar a publicação real no GitHub Pages antes de divulgá-la.
+- verificar a propriedade do domínio no Google Search Console, enviar o
+  sitemap e acompanhar a substituição de resultados antigos do WordPress;
+- revisar no Google Business Profile a consistência de nome, endereço,
+  telefone, site e link público das avaliações;
+- otimizar as imagens recorrentes de marca e o favicon antes de priorizar
+  reduções adicionais de CSS.
 
 ## Estrutura
 
