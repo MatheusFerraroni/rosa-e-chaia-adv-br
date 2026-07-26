@@ -101,6 +101,7 @@ rosa-e-chaia-adv-br/
 │   │   ├── social/
 │   │   └── imagens institucionais, variantes WebP e arquivos de marca
 │   ├── js/
+│   │   ├── home-reviews-carousel.js
 │   │   └── whatsapp-float.js
 │   └── vendor/
 │       └── bootstrap/

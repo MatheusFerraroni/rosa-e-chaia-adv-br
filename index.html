@@ -86,7 +86,7 @@
     <meta name="apple-mobile-web-app-title" content="Rosa &amp; Chaia">
     <link rel="manifest" href="/assets/img/favicon/site.webmanifest">
     <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/theme.css?v=20260724-seo-404">
+    <link rel="stylesheet" href="/assets/css/theme.css?v=20260726-a11y-autoplay">
   </head>
   <body>
     <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
@@ -168,7 +168,7 @@
             <a class="home-reviews-link" href="https://www.google.com/search?q=rosa+e+chaia&sca_esv=75280e57e4653e14&rlz=1C1ONGR_pt-PTBR1186BR1186&biw=1536&bih=695&sxsrf=APpeQnsyTlkyePjv-YuXlMfyrxeTfNmfTA%3A1784750981103&ei=hSNhap_wBfmw5OUPtaaJiAk&ved=0ahUKEwjfxvbBi-eVAxV5GLkGHTVTApEQ4dUDCBA&uact=5&oq=rosa+e+chaia&gs_lp=Egxnd3Mtd2l6LXNlcnAiDHJvc2EgZSBjaGFpYTIEEAAYHjICECYyBRAAGO8FMgUQABjvBTIFEAAY7wVIygdQ7wJY6gVwAHgCkAEAmAGmA6AB_QaqAQcyLTIuMC4xuAEDyAEA-AEBmAICoALqAcICBBAAGEeYAwCIBgGQBgWSBwUxLjAuMaAHpxKyBwMyLTG4B9wBwgcDMy0yyAcTgAgB&sclient=gws-wiz-serp#lrd=0x94bfdb011af5feed:0x2515f173f49ba052,1,,,," target="_blank" rel="noopener noreferrer">Ver no Google</a>
           </div>
 
-          <div id="avaliacoesGoogleCarousel" class="carousel slide home-reviews-carousel" data-bs-ride="carousel" data-bs-interval="6500">
+          <div id="avaliacoesGoogleCarousel" class="carousel slide home-reviews-carousel" data-bs-interval="6500">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <article class="google-review-card">
@@ -304,12 +304,12 @@
         <img class="whatsapp-float-icon" src="/assets/img/icons/whatsapp.svg" width="24" height="24" alt="" aria-hidden="true">
         <span>WhatsApp</span>
       </summary>
-      <div class="whatsapp-float-menu" aria-label="Escolha o WhatsApp">
+      <nav class="whatsapp-float-menu" aria-label="Escolha o WhatsApp">
         <p class="whatsapp-float-title">Fale pelo WhatsApp</p>
         <a href="https://wa.me/5514981903906" target="_blank" rel="noopener noreferrer">Dra. Gabriela <span>(14) 98190-3906</span></a>
         <a href="https://wa.me/5514996104356" target="_blank" rel="noopener noreferrer">Dra. Giane <span>(14) 99610-4356</span></a>
         <a href="https://wa.me/5514999091082" target="_blank" rel="noopener noreferrer">Escritório <span>(14) 99909-1082</span></a>
-      </div>
+      </nav>
     </details>
 
     <footer class="site-footer">
@@ -330,14 +330,14 @@
             <li><a href="mailto:gabriela@rosaechaia.adv.br">gabriela@rosaechaia.adv.br</a></li>
             <li><a href="mailto:giane@rosaechaia.adv.br">giane@rosaechaia.adv.br</a></li>
           </ul>
-          <div class="footer-social-links" aria-label="Redes sociais">
+          <nav class="footer-social-links" aria-label="Redes sociais">
             <a class="footer-social-link" href="https://www.instagram.com/rosaechaiaadv" target="_blank" rel="noopener noreferrer" aria-label="Instagram Rosa & Chaia">
               <img class="footer-social-icon" src="/assets/img/icons/instagram.svg" width="24" height="24" alt="" aria-hidden="true">
             </a>
             <a class="footer-social-link" href="https://www.facebook.com/people/Rosa-Chaia-Advocacia-e-Consultoria-Jur%C3%ADdica/61585195222021/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Rosa & Chaia">
               <img class="footer-social-icon" src="/assets/img/icons/facebook.svg" width="24" height="24" alt="" aria-hidden="true">
             </a>
-          </div>
+          </nav>
         </section>
         <address class="footer-location">
           <span class="footer-location-title">Localização</span>
@@ -348,6 +348,7 @@
     </footer>
 
     <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+    <script src="/assets/js/home-reviews-carousel.js" defer></script>
     <script src="/assets/js/whatsapp-float.js" defer></script>
   </body>
 </html>

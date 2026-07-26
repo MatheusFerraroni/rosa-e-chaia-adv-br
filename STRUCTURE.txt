@@ -81,6 +81,7 @@ assets/
       rosa-e-chaia-social-1200x630.png
   js/
     .gitkeep
+    home-reviews-carousel.js
     whatsapp-float.js
   vendor/
     bootstrap/
