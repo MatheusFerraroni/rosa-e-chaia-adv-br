@@ -39,6 +39,14 @@
 - categorias e tags aparecem como links textuais separados por vírgulas, sem
   aparência de botões.
 
+## Profissionais
+
+- cards exibidos na mesma linha devem ter a mesma altura;
+- foto e identificação ficam lado a lado somente enquanto houver largura
+  suficiente para o nome;
+- em larguras intermediárias, a identificação passa para baixo da foto para
+  evitar estouro horizontal.
+
 ## Tipografia
 
 A família tipográfica ainda precisa de aprovação.
