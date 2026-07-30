@@ -32,6 +32,8 @@ publicacoes/
   index.html
 contato/
   index.html
+privacidade/
+  index.html
 scripts/
   generate-responsive-images.sh
   publications.mjs
@@ -39,6 +41,7 @@ scripts/
   lib/
     publications.mjs
   tests/
+    analytics-consent.test.mjs
     publications.test.mjs
 assets/
   css/
@@ -101,6 +104,7 @@ assets/
       rosa-e-chaia-social-1200x630.png
   js/
     .gitkeep
+    analytics-consent.js
     home-reviews-carousel.js
     publications.js
     whatsapp-float.js

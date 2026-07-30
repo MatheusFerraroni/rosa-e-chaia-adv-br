@@ -29,6 +29,7 @@ Cada página deve ter:
 
 - o domínio canônico confirmado é `https://rosaechaia.adv.br/`, sem `www` e com barra final nas rotas;
 - páginas institucionais com conteúdo aprovado devem usar `index, follow, max-image-preview:large`;
+- `/privacidade/` deve ser indexável, autorreferente e incluída no sitemap;
 - `publicacoes/` deve usar `noindex, follow` enquanto contiver apenas o aviso de conteúdo em preparação;
 - remover o `noindex` de `publicacoes/` assim que a primeira publicação aprovada for disponibilizada;
 - páginas individuais de publicações aprovadas devem usar
@@ -83,3 +84,11 @@ categorias, tags e imagem já aprovados para a própria página.
 - a página de áreas de atuação deve ligar seu texto final às páginas de profissionais, parceiros e contato;
 - os links contextuais devem abrir na mesma aba, usar textos descritivos e não substituir a navegação principal;
 - a página de contato e a página de publicações não recebem links contextuais adicionais nesta etapa.
+
+## Consentimento
+
+- o aviso é uma região não modal, não captura foco automaticamente na primeira
+  visita e oferece ações de aceitar e recusar por teclado;
+- a abertura deliberada pelas preferências move o foco para o título do aviso;
+- o controle deve permanecer disponível no rodapé de todo HTML público,
+  inclusive 404 e publicações geradas.

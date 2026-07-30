@@ -1,6 +1,7 @@
 (() => {
   const widget = document.querySelector(".whatsapp-float");
   const footer = document.querySelector(".site-footer");
+  const footerGap = 16;
 
   if (!widget || !footer) {
     return;
@@ -16,8 +17,8 @@
   const updatePosition = () => {
     const baseBottom = getBaseBottom();
     const footerTop = footer.getBoundingClientRect().top;
-    const overlap = window.innerHeight - footerTop + baseBottom;
-    const nextBottom = Math.max(baseBottom, overlap);
+    const footerLimit = window.innerHeight - footerTop + footerGap;
+    const nextBottom = Math.max(baseBottom, footerLimit);
 
     widget.style.setProperty("--whatsapp-float-bottom", `${Math.round(nextBottom)}px`);
     ticking = false;
@@ -35,5 +36,6 @@
   window.addEventListener("scroll", requestUpdate, { passive: true });
   window.addEventListener("resize", requestUpdate);
   window.addEventListener("load", requestUpdate);
+  window.addEventListener("privacyconsentchange", requestUpdate);
   requestUpdate();
 })();

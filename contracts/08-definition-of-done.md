@@ -27,6 +27,10 @@ Uma entrega só está pronta quando todos os itens aplicáveis forem atendidos.
 - sem segredos;
 - acessibilidade básica validada;
 - metadados principais preenchidos.
+- nenhuma requisição do Google Analytics antes do consentimento;
+- recusa e revogação mantêm o site funcional;
+- pageviews não enviam a busca livre `q`;
+- eventos de contato não contêm telefone, e-mail, URL ou texto do link;
 
 ## Publicação
 
@@ -38,6 +42,8 @@ Uma entrega só está pronta quando todos os itens aplicáveis forem atendidos.
 - domínio confirmado antes de criar `CNAME`;
 - HTTPS ativo;
 - rotas e recursos validados no ambiente publicado.
+- página de privacidade e controlador de consentimento presentes em todo o
+  artefato, inclusive publicações geradas.
 
 ## Registro
 

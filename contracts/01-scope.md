@@ -12,6 +12,9 @@ O primeiro ciclo de implementação deve contemplar:
 - publicações individuais geradas a partir de Markdown;
 - busca, filtros, ordenação e paginação na página de publicações;
 - página de contato;
+- página de privacidade;
+- Google Analytics 4 condicionado ao consentimento, com medição de páginas e
+  cliques nos canais de contato;
 - botão flutuante de WhatsApp com seleção dos contatos aprovados, exceto na página de contato;
 - rodapé com informações institucionais aprovadas;
 - navegação responsiva;
@@ -41,6 +44,14 @@ O Codex não deve transformar marcadores em dados inventados.
 - adicionar cookies de marketing;
 - criar animações complexas;
 - alterar a estrutura de hospedagem.
+
+## Integração externa aprovada
+
+- está aprovado o Google Analytics 4 com o identificador `G-5LQ01Z477N`;
+- a tag deve usar consentimento básico e não pode carregar antes da aceitação;
+- a integração não autoriza Google Tag Manager, publicidade, Google Signals,
+  personalização de anúncios ou outras tags de terceiros;
+- a recusa não pode impedir o acesso ao site ou aos canais de contato.
 
 ## Publicações em Markdown
 

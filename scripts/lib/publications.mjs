@@ -11,6 +11,10 @@ export const SITE_URL = "https://rosaechaia.adv.br";
 export const PUBLICATIONS_INDEX_PATH =
   "/assets/data/publicacoes/index.json";
 export const PUBLICATION_SCHEMA_VERSION = 1;
+const ANALYTICS_CONTROLLER_REFERENCE =
+  'src="/assets/js/analytics-consent.js?v=20260730-ga4-consent" data-analytics-controller';
+const ANALYTICS_CONTROLLER_PATH = "assets/js/analytics-consent.js";
+const ANALYTICS_MEASUREMENT_ID = "G-5LQ01Z477N";
 
 const MODULE_DIR = path.dirname(fileURLToPath(import.meta.url));
 export const DEFAULT_PROJECT_ROOT = path.resolve(MODULE_DIR, "../..");
@@ -31,6 +35,7 @@ const PUBLIC_DIRECTORIES = [
   "profissionais",
   "publicacoes",
   "contato",
+  "privacidade",
 ];
 
 const STATIC_SITEMAP_ROUTES = [
@@ -39,6 +44,7 @@ const STATIC_SITEMAP_ROUTES = [
   "/areas-de-atuacao/",
   "/profissionais/",
   "/contato/",
+  "/privacidade/",
 ];
 
 const SAFE_IMAGE_EXTENSIONS = new Set([".webp", ".jpg", ".jpeg", ".png"]);
@@ -1271,6 +1277,7 @@ export async function checkDist({
     "robots.txt",
     "sitemap.xml",
     "publicacoes/index.html",
+    "privacidade/index.html",
     PUBLICATIONS_INDEX_PATH.slice(1),
   ];
 
@@ -1379,6 +1386,7 @@ export async function checkDist({
     }
   }
 
+  await validateAnalyticsCoverage(outputRoot);
   await validateInternalReferences(outputRoot);
   return { publications };
 }
@@ -1414,6 +1422,63 @@ async function listFiles(root, current = root) {
     }
   }
   return files;
+}
+
+async function validateAnalyticsCoverage(outputRoot) {
+  const files = await listFiles(outputRoot);
+  const htmlFiles = files.filter(
+    (relativePath) => path.extname(relativePath).toLowerCase() === ".html",
+  );
+
+  for (const relativePath of htmlFiles) {
+    const html = await fs.readFile(
+      path.join(outputRoot, relativePath),
+      "utf8",
+    );
+    const controllerCount = html.split(ANALYTICS_CONTROLLER_REFERENCE).length - 1;
+
+    if (controllerCount !== 1) {
+      throw new Error(
+        `${relativePath}: deve carregar exatamente um controlador de consentimento do Analytics`,
+      );
+    }
+    if (html.includes("googletagmanager.com/gtag/js")) {
+      throw new Error(
+        `${relativePath}: a tag do Google não pode ser carregada diretamente antes do consentimento`,
+      );
+    }
+    if (
+      !html.includes('href="/privacidade/"') ||
+      !html.includes("data-privacy-preferences")
+    ) {
+      throw new Error(
+        `${relativePath}: política ou preferências de privacidade ausentes`,
+      );
+    }
+  }
+
+  const controllerSource = await fs.readFile(
+    path.join(outputRoot, ANALYTICS_CONTROLLER_PATH),
+    "utf8",
+  );
+  const measurementIdCount =
+    controllerSource.split(ANALYTICS_MEASUREMENT_ID).length - 1;
+  if (
+    measurementIdCount !== 1 ||
+    !controllerSource.includes("www.googletagmanager.com/gtag/js")
+  ) {
+    throw new Error(
+      "controlador de consentimento não contém uma única configuração GA4 válida",
+    );
+  }
+
+  const sitemap = await fs.readFile(
+    path.join(outputRoot, "sitemap.xml"),
+    "utf8",
+  );
+  if (!sitemap.includes(`${SITE_URL}/privacidade/`)) {
+    throw new Error("a página de privacidade está ausente do sitemap");
+  }
 }
 
 async function validateInternalReferences(outputRoot) {

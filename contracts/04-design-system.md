@@ -47,6 +47,15 @@
 - em larguras intermediárias, a identificação passa para baixo da foto para
   evitar estouro horizontal.
 
+## Privacidade
+
+- o aviso de consentimento usa apenas a paleta obrigatória e permanece legível
+  sobre o conteúdo;
+- aceitar e recusar ficam visíveis com peso equivalente e foco identificável;
+- o aviso não bloqueia a navegação nem se sobrepõe ao botão de WhatsApp;
+- política e preferências permanecem disponíveis no rodapé;
+- em telas pequenas, texto e ações passam para uma composição vertical.
+
 ## Tipografia
 
 A família tipográfica ainda precisa de aprovação.

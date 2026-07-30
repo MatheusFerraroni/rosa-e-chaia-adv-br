@@ -4,7 +4,7 @@ Site institucional estático do escritório Rosa & Chaia.
 
 ## Estado atual
 
-O projeto contém as seis rotas estáticas previstas nos contratos, com navegação
+O projeto contém as sete rotas estáticas previstas nos contratos, com navegação
 responsiva, identidade visual compartilhada, rodapé institucional e botão
 flutuante de WhatsApp em todas as páginas, exceto na página de contato.
 
@@ -14,8 +14,14 @@ artigos continuam em preparação e, por isso, permanece fora da indexação.
 Quando houver arquivos válidos em `_publicacoes/<ano>/`, o gerador criará a
 listagem, as páginas individuais e o índice público automaticamente.
 
-O Bootstrap 5.3.8 está armazenado localmente e não há dependências em tempo de
-execução carregadas por CDN.
+O Bootstrap 5.3.8 e os recursos do site estão armazenados localmente. A única
+exceção externa em tempo de execução é o Google Analytics 4, cujo script só é
+solicitado depois do consentimento.
+
+O Analytics usa o identificador `G-5LQ01Z477N`, mede visualizações saneadas e
+cliques categorizados nos canais de contato. A escolha fica no armazenamento
+local do navegador e pode ser revista no rodapé. Os detalhes estão em
+`/privacidade/`.
 
 Na página inicial, o carrossel de avaliações avança automaticamente a cada 6,5
 segundos, respeita a preferência por redução de movimento e permanece pausado
@@ -95,6 +101,7 @@ dimensões e a transparência aplicáveis e só então atualiza as variantes em
 - `/publicacoes/`
 - `/publicacoes/<slug>/` para cada publicação gerada
 - `/contato/`
+- `/privacidade/`
 
 ## Publicação validada
 
@@ -153,6 +160,8 @@ rosa-e-chaia-adv-br/
 │   └── index.html
 ├── contato/
 │   └── index.html
+├── privacidade/
+│   └── index.html
 ├── scripts/
 │   ├── generate-responsive-images.sh
 │   ├── publications.mjs
@@ -160,6 +169,7 @@ rosa-e-chaia-adv-br/
 │   ├── lib/
 │   │   └── publications.mjs
 │   └── tests/
+│       ├── analytics-consent.test.mjs
 │       └── publications.test.mjs
 ├── assets/
 │   ├── css/
@@ -173,6 +183,7 @@ rosa-e-chaia-adv-br/
 │   │   ├── social/
 │   │   └── imagens institucionais, variantes WebP e arquivos de marca
 │   ├── js/
+│   │   ├── analytics-consent.js
 │   │   ├── home-reviews-carousel.js
 │   │   ├── publications.js
 │   │   └── whatsapp-float.js

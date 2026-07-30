@@ -31,6 +31,7 @@ const PUBLIC_DIRECTORIES = [
   "profissionais",
   "publicacoes",
   "contato",
+  "privacidade",
 ];
 
 async function createFixture(testContext, { staticSite = false } = {}) {
@@ -410,11 +411,17 @@ test("gera artefato completo e remove uma publicação sem resíduos", async (t)
   );
   assert.match(article, /class="publication-taxonomy-link"/);
   assert.doesNotMatch(article, /publication-chip/);
+  assert.equal(
+    article.match(/data-analytics-controller/g)?.length,
+    1,
+  );
+  assert.match(article, /href="\/privacidade\/"/);
   assert.match(
     article,
     /<meta property="article:author" content="https:\/\/rosaechaia\.adv\.br\/">/,
   );
   assert.match(sitemap, /\/publicacoes\/publicacao-renderizada\//);
+  assert.match(sitemap, /\/privacidade\//);
   await assert.rejects(
     fs.access(path.join(firstBuild.outputRoot, "_publicacoes")),
   );

@@ -15,7 +15,9 @@
 │   ├── index.html
 │   └── <slug>/
 │       └── index.html
-└── contato/
+├── contato/
+│   └── index.html
+└── privacidade/
     └── index.html
 ```
 
@@ -37,6 +39,8 @@ Ordem recomendada:
 - links internos devem funcionar no domínio e em ambiente local;
 - não usar extensões `.html` nos links de navegação;
 - não criar rotas sem registrar a mudança neste contrato.
+- a política de privacidade fica em `/privacidade/`, é ligada por todos os
+  rodapés e não integra a navegação principal.
 
 ## Publicações
 

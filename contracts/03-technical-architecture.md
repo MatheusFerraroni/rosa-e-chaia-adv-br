@@ -27,6 +27,10 @@ Regras:
 - não editar diretamente os arquivos minificados do Bootstrap;
 - sobrescrever estilos apenas em arquivos próprios.
 
+A proibição de CDN continua válida para os recursos do site. A única exceção
+externa aprovada é o carregamento consentido de
+`https://www.googletagmanager.com/gtag/js?id=G-5LQ01Z477N`.
+
 ## CSS
 
 Arquivo inicial:
@@ -56,6 +60,22 @@ assets/css/
 
 O JavaScript de publicações aprimora progressivamente uma listagem já presente
 no HTML. Sem JavaScript, os cards e links individuais continuam disponíveis.
+
+## Analytics e consentimento
+
+- cada HTML carrega um único controlador local em
+  `/assets/js/analytics-consent.js`;
+- o controlador define o consentimento de Analytics como negado por padrão e
+  não solicita o script do Google antes da aceitação;
+- `ad_storage`, `ad_user_data` e `ad_personalization` permanecem negados;
+- a preferência usa a chave versionada
+  `rosa-e-chaia:analytics-consent:v1` no armazenamento local;
+- a configuração usa `send_page_view: false` e envia um `page_view` manual,
+  removendo o parâmetro livre `q` da localização;
+- cliques de contato usam apenas `contact_channel`, `contact_target` e
+  `contact_placement`, com valores fechados e sem destino bruto;
+- revogar a autorização impede novo carregamento e remove cookies `_ga*`
+  acessíveis pela origem antes de recarregar a página.
 
 ## Geração estática
 
@@ -90,4 +110,6 @@ Antes da publicação, validar o comportamento escolhido na configuração real 
 - nunca incluir tokens, senhas ou chaves privadas;
 - não expor dados pessoais sem autorização;
 - não inserir scripts de terceiros sem aprovação;
+- limitar a exceção do Analytics ao identificador, finalidade e consentimento
+  definidos neste contrato;
 - links externos devem usar atributos de segurança adequados quando abrirem nova aba.

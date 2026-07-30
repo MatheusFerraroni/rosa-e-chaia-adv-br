@@ -103,14 +103,28 @@ O botão flutuante de WhatsApp deve usar apenas os números aprovados acima, abr
 
 ## Privacidade
 
-Qualquer coleta de dados exige definição prévia de:
-
-- finalidade;
-- base operacional;
-- campos coletados;
-- destino dos dados;
-- retenção;
-- aviso de privacidade;
-- responsável pelo atendimento.
-
-Até essa aprovação, a página de contato deve usar apenas informações confirmadas e soluções estáticas aprovadas.
+- finalidade: compreender visitas, avaliar uso do site e medir cliques nos
+  canais de contato;
+- base operacional: consentimento do visitante, que pode ser recusado ou
+  revogado sem limitar o site;
+- campos de visualização: título e localização saneada da página, referência e
+  informações técnicas de sessão, navegador, dispositivo, sistema, idioma e
+  localização aproximada processadas pelo GA4;
+- o parâmetro livre `q` da busca não pode ser enviado;
+- o evento `contact_click` usa somente canal (`whatsapp`, `email`, `map`,
+  `instagram`, `facebook`), destino (`gabriela`, `giane`, `escritorio`) e
+  posição (`contact_page`, `floating_menu`, `footer`);
+- telefone, e-mail, URL externa, texto do link e conteúdo digitado não podem
+  integrar eventos customizados;
+- destino: propriedade Google Analytics 4 `G-5LQ01Z477N`, operada pelo Google;
+- retenção de eventos e usuários: 14 meses na configuração da propriedade;
+- cookies `_ga*` só podem existir após a aceitação e devem ser removidos,
+  quando tecnicamente acessíveis, após revogação;
+- Google Signals, publicidade, personalização e vínculos com Google Ads
+  permanecem desativados;
+- o aviso resumido, a página `/privacidade/` e o controle persistente no rodapé
+  formam o aviso de privacidade;
+- o atendimento é feito pelo escritório nos e-mails aprovados
+  `gabriela@rosaechaia.adv.br` e `giane@rosaechaia.adv.br`;
+- o conteúdo da política deve passar por revisão responsável antes da
+  publicação.

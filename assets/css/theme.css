@@ -124,6 +124,10 @@ select:focus-visible {
   padding-block: clamp(3.5rem, 8vw, 6rem);
 }
 
+.page-intro-privacy {
+  padding-block: clamp(3.5rem, 8vw, 6rem);
+}
+
 .page-kicker {
   margin-bottom: 0.5rem;
   color: var(--color-primary);
@@ -1175,6 +1179,43 @@ select:focus-visible {
   hyphens: auto;
 }
 
+.privacy-page {
+  max-width: 58rem;
+  margin-top: 2rem;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  border-left: 4px solid var(--color-secondary);
+  background-color: var(--color-white);
+}
+
+.privacy-page section + section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-secondary);
+}
+
+.privacy-page h2 {
+  margin-bottom: 0.85rem;
+  color: var(--color-primary);
+  font-size: clamp(1.3rem, 3vw, 1.65rem);
+  font-weight: 700;
+}
+
+.privacy-page p,
+.privacy-page li {
+  line-height: 1.7;
+}
+
+.privacy-page p:last-child,
+.privacy-page ul:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-page a {
+  font-weight: 650;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
 .site-footer {
   padding-block: 2rem;
   color: var(--color-white);
@@ -1214,6 +1255,37 @@ select:focus-visible {
   margin: 0;
   color: var(--color-secondary);
   font-size: 0.875rem;
+}
+
+.footer-privacy-links {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 0.85rem;
+}
+
+.footer-privacy-links a,
+.footer-privacy-links button {
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--color-secondary);
+  background: transparent;
+  font: inherit;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  text-align: left;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  cursor: pointer;
+}
+
+.footer-privacy-links a:hover,
+.footer-privacy-links a:focus,
+.footer-privacy-links button:hover,
+.footer-privacy-links button:focus {
+  color: var(--color-white);
 }
 
 .footer-contact-summary {
@@ -1414,6 +1486,89 @@ select:focus-visible {
   font-size: 0.9rem;
 }
 
+.has-privacy-consent .whatsapp-float {
+  --whatsapp-float-base-bottom: var(--privacy-consent-offset, 12rem);
+}
+
+.privacy-consent {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1090;
+  padding:
+    1rem max(1rem, env(safe-area-inset-right))
+    max(1rem, env(safe-area-inset-bottom))
+    max(1rem, env(safe-area-inset-left));
+  border-top: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  background-color: var(--color-surface);
+}
+
+.privacy-consent[hidden] {
+  display: none;
+}
+
+.privacy-consent__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(1rem, 4vw, 3rem);
+  width: min(100%, 75rem);
+  margin-inline: auto;
+}
+
+.privacy-consent__copy {
+  max-width: 48rem;
+}
+
+.privacy-consent__title {
+  margin-bottom: 0.35rem;
+  font-size: 1.15rem;
+  font-weight: 750;
+}
+
+.privacy-consent__copy p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.privacy-consent__copy a {
+  font-weight: 700;
+  text-underline-offset: 0.18em;
+}
+
+.privacy-consent__actions {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.privacy-consent__button {
+  min-height: 2.75rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--color-primary);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.privacy-consent__button--primary {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+.privacy-consent__button--secondary {
+  color: var(--color-primary);
+  background-color: var(--color-white);
+}
+
+.privacy-consent__button:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 @media (min-width: 1200px) {
   .site-header .navbar-nav {
     gap: 0.75rem;
@@ -1471,6 +1626,20 @@ select:focus-visible {
 }
 
 @media (max-width: 767.98px) {
+  .privacy-consent__inner {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .privacy-consent__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .privacy-consent__button {
+    width: 100%;
+  }
+
   .publications-primary-grid {
     grid-template-columns: minmax(0, 2fr) minmax(9rem, 1fr);
   }
@@ -1492,6 +1661,14 @@ select:focus-visible {
 }
 
 @media (max-width: 575.98px) {
+  .privacy-consent__actions {
+    grid-template-columns: 1fr;
+  }
+
+  .privacy-page {
+    padding: 1.35rem;
+  }
+
   .brand-logo {
     width: 11rem;
     height: 4.4rem;

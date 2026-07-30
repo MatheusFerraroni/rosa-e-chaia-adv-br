@@ -40,3 +40,8 @@ O domínio final confirmado é `rosaechaia.adv.br`.
   editoriais não foram incluídos no artefato;
 - confirmar geração do índice, páginas individuais e sitemap;
 - confirmar que a configuração de Pages usa GitHub Actions como fonte.
+- confirmar que todo HTML contém exatamente um controlador local de Analytics;
+- confirmar ausência de carregamento direto do Google antes do consentimento;
+- confirmar `/privacidade/` no artefato e no sitemap;
+- validar em navegador que recusa, aceitação, persistência e revogação não
+  quebram links, mobile, foco ou console.
