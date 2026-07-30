@@ -172,6 +172,8 @@ test("coleta GFM, coautoria, assinatura institucional e facetas", async (t) => {
       "| --- | --- |",
       "| Exemplo | 1 |",
       "",
+      "Acesse https://example.com/seguranca.",
+      "",
       "> Uma citação.",
       "",
       `![Descrição do fluxo](/assets/img/publicacoes/${slug}/fluxo.png)`,
@@ -202,6 +204,10 @@ test("coleta GFM, coautoria, assinatura institucional e facetas", async (t) => {
   assert.equal(publications[0].authors.length, 2);
   assert.match(publications[0].bodyHtml, /<table>/);
   assert.match(publications[0].bodyHtml, /<blockquote>/);
+  assert.match(
+    publications[0].bodyHtml,
+    /<a href="https:\/\/example\.com\/seguranca">/,
+  );
   assert.match(publications[0].bodyHtml, /loading="lazy"/);
   assert.equal(
     publications[0].summary,
