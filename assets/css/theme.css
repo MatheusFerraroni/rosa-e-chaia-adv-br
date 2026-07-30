@@ -19,6 +19,10 @@ body {
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
+body.has-whatsapp-float {
+  position: relative;
+}
+
 a {
   color: inherit;
 }
@@ -1408,9 +1412,18 @@ select:focus-visible {
 .whatsapp-float {
   position: fixed;
   right: max(1rem, env(safe-area-inset-right));
-  bottom: var(--whatsapp-float-bottom, max(1rem, env(safe-area-inset-bottom)));
+  bottom: max(
+    var(--whatsapp-float-base-bottom),
+    env(safe-area-inset-bottom, 0px)
+  );
   z-index: 1080;
   --whatsapp-float-base-bottom: 16px;
+}
+
+.whatsapp-float--anchored {
+  position: absolute;
+  top: var(--whatsapp-float-top);
+  bottom: auto;
 }
 
 .whatsapp-float-button {
@@ -1455,10 +1468,16 @@ select:focus-visible {
   display: grid;
   gap: 0.5rem;
   width: min(18.5rem, calc(100vw - 2rem));
+  max-height: var(
+    --whatsapp-float-menu-max-height,
+    calc(100dvh - 6rem)
+  );
   padding: 1rem;
+  overflow-y: auto;
   border: 1px solid var(--color-secondary);
   color: var(--color-primary);
   background-color: var(--color-white);
+  overscroll-behavior: contain;
 }
 
 .whatsapp-float-title {
@@ -1626,6 +1645,28 @@ select:focus-visible {
 }
 
 @media (max-width: 767.98px) {
+  body.has-whatsapp-float .page-main {
+    padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .home-intro-copy p,
+  .home-choice-intro,
+  .home-pillar p,
+  .google-review-text,
+  .office-story p,
+  .practice-area-block p,
+  .publications-intro,
+  .publications-empty p:not(.publications-empty-title),
+  .publication-content p:not(.publication-meta),
+  .publication-body p,
+  .publication-body li,
+  .professional-bio p,
+  .professional-partners-panel p {
+    text-align: left;
+    overflow-wrap: anywhere;
+    hyphens: none;
+  }
+
   .privacy-consent__inner {
     align-items: stretch;
     flex-direction: column;

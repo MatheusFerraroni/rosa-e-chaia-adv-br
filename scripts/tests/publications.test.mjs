@@ -421,6 +421,14 @@ test("gera artefato completo e remove uma publicação sem resíduos", async (t)
     article.match(/data-analytics-controller/g)?.length,
     1,
   );
+  assert.match(
+    article,
+    /href="\/assets\/css\/theme\.css\?v=20260730-mobile"/,
+  );
+  assert.match(
+    article,
+    /src="\/assets\/js\/whatsapp-float\.js\?v=20260730-mobile"/,
+  );
   assert.match(article, /href="\/privacidade\/"/);
   assert.match(
     article,

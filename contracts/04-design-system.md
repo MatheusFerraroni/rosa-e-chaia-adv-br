@@ -47,6 +47,13 @@
 - em larguras intermediárias, a identificação passa para baixo da foto para
   evitar estouro horizontal.
 
+## Leitura em telas pequenas
+
+- até `767.98px`, textos corridos usam alinhamento à esquerda e não aplicam
+  hifenização automática;
+- palavras e endereços longos podem quebrar para impedir estouro horizontal;
+- a composição de telas maiores pode preservar o alinhamento justificado.
+
 ## Privacidade
 
 - o aviso de consentimento usa apenas a paleta obrigatória e permanece legível
@@ -55,6 +62,15 @@
 - o aviso não bloqueia a navegação nem se sobrepõe ao botão de WhatsApp;
 - política e preferências permanecem disponíveis no rodapé;
 - em telas pequenas, texto e ações passam para uma composição vertical.
+
+## WhatsApp flutuante
+
+- o botão permanece flutuante durante a navegação e se ancora acima do rodapé
+  sem saltos visuais;
+- o conteúdo final e os controles focáveis devem continuar alcançáveis em telas
+  pequenas;
+- o menu aberto deve permanecer contido na área visível e permitir rolagem
+  interna quando necessário.
 
 ## Tipografia
 

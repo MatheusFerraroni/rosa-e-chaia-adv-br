@@ -16,6 +16,10 @@ Uma entrega só está pronta quando todos os itens aplicáveis forem atendidos.
 - carrega Bootstrap localmente;
 - aplica estilos próprios depois do Bootstrap;
 - não apresenta quebra visual evidente.
+- textos corridos permanecem legíveis e sem hifenização automática em telas
+  pequenas;
+- o botão flutuante de WhatsApp não salta ao alcançar o rodapé e não impede o
+  acesso ao conteúdo final ou a controles focáveis;
 
 ## Qualidade
 
